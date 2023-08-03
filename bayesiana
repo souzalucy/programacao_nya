@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+double calcularProbabilidadeBayesiana(double Peh, double Ph, double Pe) {
+    double Phe = (Peh * Ph) / Pe;
+    return Phe;
+}
+
+int main() {
+    double Peh = 0.8;  // Probabilidade P(E|H)
+    double Ph = 0.6;   // Probabilidade P(H)
+    double Pe = 0.5;   // Probabilidade P(E)
+
+    double resultado = calcularProbabilidadeBayesiana(Peh, Ph, Pe);
+
+    cout << "A probabilidade condicional P(H|E) é: " << resultado << endl;
+
+    return 0;
+}
+
+
+
+
+
+///int bayesian(int Peh, int Ph, int Pe) {
+   // int Phe = (Peh * Ph) / Pe;
+    //return Phe;
+//}
+
+//int main() {
+//    int resultado = bayesian(2, 3, 4);
+ //   cout << "Resultado: " << resultado << endl;
+   // return 0;
+//}
+
+/// Phe = prob da hipótese se evidência é verdadeira
+/// Peh = prob da evidência se hipótese é verdadeira
+/// Ph = prob da hipótese
+/// Pe = prob da evidência
+
